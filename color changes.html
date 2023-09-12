@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color Changing Background</title>
+<style>
+  button {
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+  <h1>java script code</h1>
+
+<button id="colorButton">Click me to change background color</button>
+
+<script>
+const colors = ['red', 'blue', 'green', 'purple', 'orange']; // List of colors
+let currentIndex = 0; // Index to keep track of the current color
+
+// Function to change the background color of the body
+function changeBackgroundColor() {
+    document.body.style.backgroundColor = colors[currentIndex]; // Change the background color
+
+    // Update currentIndex for the next click
+    currentIndex = (currentIndex + 1) % colors.length;
+}
+
+// Add an event listener to the button
+document.getElementById('colorButton').addEventListener('click', changeBackgroundColor);
+</script>
+
+</body>
+</html>
